@@ -1,0 +1,195 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=none">
+    
+    <title>SMARTplugs - a remote for 2.0 plugs</title>
+    <meta name="description" content="Remote Control for your plugs">
+    <meta name="author" content="@geekoNERD">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+  
+    <div class="container margin-bottom">
+  
+      <h5 class="text-center"><code>SMARTplugs</code></h5>
+      
+      <div id="progress" class="progress hidden">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      
+      <div id="message" class="alert hidden">
+        
+      </div>
+  
+      <div id="home" class="hidden app-panel">
+        <div class="panel">
+          <div class="panel-body">
+            <div class="plugaction btn-group btn-group-justified" role="group">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default">ON</button>
+              </div>
+              <div class="btn-group text-center" role="group">
+                <span class="plugname label label-primary">router</span>
+              </div>
+              <div class="btn-group" role="group"> 
+                <button type="button" class="btn btn-default">OFF</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-body">
+            <div class="plugaction btn-group btn-group-justified" role="group">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default">ON</button>
+              </div>
+              <div class="btn-group text-center" role="group">
+                <span class="plugname label label-primary">sala</span>
+              </div>
+              <div class="btn-group" role="group"> 
+                <button type="button" class="btn btn-default">OFF</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-body">
+            <div class="plugaction btn-group btn-group-justified" role="group">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default">ON</button>
+              </div>
+              <div class="btn-group text-center" role="group">
+                <span class="plugname label label-primary">n/a</span>
+              </div>
+              <div class="btn-group" role="group"> 
+                <button type="button" class="btn btn-default">OFF</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-body">
+            <div class="plugaction btn-group btn-group-justified" role="group">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default">ON</button>
+              </div>
+              <div class="btn-group text-center" role="group">
+                <span class="plugname label label-primary">camera</span>
+              </div>
+              <div class="btn-group" role="group"> 
+                <button type="button" class="btn btn-default">OFF</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-body">
+            <div class="plugaction btn-group btn-group-justified" role="group">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default">ON</button>
+              </div>
+              <div class="btn-group text-center" role="group">
+                <span class="plugname label label-primary">ALL</span>
+              </div>
+              <div class="btn-group" role="group"> 
+                <button type="button" class="btn btn-default">OFF</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="settings" class="hidden app-panel">
+        <div class="panel">
+          <div class="panel-body">
+            <p class="text-center">Nome presa</p>
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">Presa 1</span>
+              <input type="text" class="form-control plugname" placeholder="nome 1" 
+                aria-describedby="basic-addon1" plug-number="a">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon2">Presa 2</span>
+              <input type="text" class="form-control plugname" placeholder="nome 2" 
+                aria-describedby="basic-addon2" plug-number="b">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon3">Presa 3</span>
+              <input type="text" class="form-control plugname" placeholder="nome 3" 
+                aria-describedby="basic-addon3" plug-number="c">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon4">Presa 4</span>
+              <input type="text" class="form-control plugname" placeholder="nome 4" 
+                aria-describedby="basic-addon4" plug-number="d">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon5">Tutte le prese</span>
+              <input type="text" class="form-control plugname" placeholder="tutte" 
+                aria-describedby="basic-addon5" plug-number="all">
+            </div>
+            <hr/>
+            <div class="btn-group btn-group-justified" role="group">
+              <div class="btn-group" role="group">
+                <button type="button" id="save_configuration"
+                  class="btn btn-default">SALVA</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="info" class="hidden app-panel">
+        <div class="panel text-center">
+          <div class="media">
+            <div class="media-center">
+              <img class="media-object center-block"
+                src="data/logo.png" alt="SMARTplugs">
+            </div>
+            <div class="media-body">
+              <p class="media-heading">a smart remote for your plugs</p>
+              <p id="version"></p>
+              <p><i class="glyphicon glyphicon-user"></i>
+                @geekonerd</p>
+              <p><i class="glyphicon glyphicon-globe"></i>
+                <a href="http://geekonerd.xyz">geekonerd.xyz</a></p>
+              <p><i class="glyphicon glyphicon-cloud-download"></i>
+                <a href="https://github.com/geekonerd/smartplugs">GitHub</a></p>
+            </div>
+          </div>
+      </div>
+      
+    </div>
+    
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <div class="btn-toolbar" role="toolbar" aria-label="menu">
+          <div id="menu" class="btn-group btn-group-justified" role="group">
+            <a class="btn btn-lg" href="#home">
+              <i class="glyphicon glyphicon-th"></i></a>
+            <a class="btn btn-lg" href="#settings">
+              <i class="glyphicon glyphicon-cog"></i></a>
+            <a class="btn btn-lg" href="#info">
+              <i class="glyphicon glyphicon-info-sign"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+
+</html>
