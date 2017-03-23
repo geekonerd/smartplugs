@@ -2,7 +2,7 @@
 *a smart remote for 2.0 plugs*
 
 ### Intro
-**SMARTplugs** è una *web-app* che consente di controllare prese radiocomandate grazie a chip ricetrasmittenti collegati ad un Raspberry Pi. Per maggiori dettagli sul funzionamento generale rimando al *tutorial* pubblicato sul mio blog.
+**SMARTplugs** è una *web-app* che consente di controllare prese radiocomandate grazie a chip ricetrasmittenti collegati ad un Raspberry Pi. Per maggiori dettagli sul funzionamento generale rimando al *tutorial* pubblicato sul mio blog (https://geekonerd.blogspot.it/2017/03/tutorial-come-rendere-smart-le-prese-di-casa-con-il-raspberry-pi-zero-wireless.html).
 
 #### Contenuto
 Sono compresi:
