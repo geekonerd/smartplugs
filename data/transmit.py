@@ -34,15 +34,15 @@ def transmit_code(code):
             if i == '1':
                 '''Bit = 1, accensione breve e poi spegnimento lungo del PIN'''
                 GPIO.output(PIN_DATA_DI_INVIO, 1)
-                time.sleep(intervallo_breve_1)
+                time.sleep(intervallo_breve)
                 GPIO.output(PIN_DATA_DI_INVIO, 0)
-                time.sleep(intervallo_lungo_1)
+                time.sleep(intervallo_lungo)
             elif i == '0':
                 '''Bit = 0, accensione lunga e poi spegnimento breve del PIN'''
                 GPIO.output(PIN_DATA_DI_INVIO, 1)
-                time.sleep(intervallo_lungo_0)
+                time.sleep(intervallo_lungo)
                 GPIO.output(PIN_DATA_DI_INVIO, 0)
-                time.sleep(intervallo_breve_0)
+                time.sleep(intervallo_breve)
             else:
                 continue
         '''Spegnimento del PIN e attesa fino al prossimo intervallo'''
